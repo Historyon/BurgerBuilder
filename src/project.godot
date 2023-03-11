@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="BurgerBuilder"
-run/main_scene="res://Scenes/main.tscn"
+run/main_scene="res://Scenes/Main.tscn"
 config/features=PackedStringArray("4.0", "C#", "Mobile")
 config/icon="res://Assets/Art/icon.svg"
 

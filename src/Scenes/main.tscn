@@ -1,14 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6tjick42bdhs"]
+[gd_scene load_steps=3 format=3 uid="uid://bh6f52eyljrg2"]
 
-[ext_resource type="Script" path="res://Scripts/Main.cs" id="1_tq5c8"]
-[ext_resource type="PackedScene" uid="uid://lne70xogh5xi" path="res://Scenes/jim.tscn" id="1_xlx0f"]
+[ext_resource type="Script" path="res://Scripts/Main.cs" id="1_8ercu"]
+[ext_resource type="PackedScene" uid="uid://cautwuqsyip4f" path="res://Scenes/Jim.tscn" id="2_721r5"]
 
 [node name="Main" type="Node"]
-script = ExtResource("1_tq5c8")
+script = ExtResource("1_8ercu")
 
-[node name="Jim" parent="." instance=ExtResource("1_xlx0f")]
-position = Vector2(122, 137)
-script = null
+[node name="Jim" parent="." instance=ExtResource("2_721r5")]
+position = Vector2(419, 510)
 
 [node name="JimStartPosition" type="Marker2D" parent="."]
 position = Vector2(419, 515)

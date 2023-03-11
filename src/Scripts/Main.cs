@@ -9,7 +9,7 @@ public partial class Main : Node
     {
         _jim.Hide();
         var screenSize = GetViewport().GetVisibleRect().Size;
-        _jimStartPosition.Position = new Vector2(screenSize.X / 2, screenSize.Y - 200);
+        _jimStartPosition.Position = new Vector2(screenSize.X / 2, screenSize.Y - 100);
 
         // TODO: Remove later when their is a button
         NewGame();
