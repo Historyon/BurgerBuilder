@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://lne70xogh5xi"]
+
+[ext_resource type="Texture2D" uid="uid://c42twgelld4v8" path="res://Assets/Art/icon.svg" id="1_6xai4"]
+[ext_resource type="Script" path="res://Scripts/Jim.cs" id="1_dqcdl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_naus1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6xai4")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jsrn2"]
+size = Vector2(64, 64)
+
+[node name="Jim" type="CharacterBody2D"]
+position = Vector2(419, 475)
+script = ExtResource("1_dqcdl")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_naus1")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jsrn2")

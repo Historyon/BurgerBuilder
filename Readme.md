@@ -2,6 +2,8 @@
 
 Burger Builder is my first small game for learning purpose. It is created with the game engine godot. I want to create a simple game with some rules.
 
+When you want to edit something please have a look inside [the setup section][Setup].
+
 ## General idea
 
 You're playing Jim the burger builder. Jims task is to catch falling burger ingredients in a corret order and serve the builded burger the customers. Jim works in shift work so his time to build burgers is limited. In most cases customers will also eat burgers that are not builded as they whishes but pay less money for the burger. In some cases a customer will not pay for a builded burger. For example when the customer is a vegan and Jim serves a burger with meat from animals.
@@ -131,5 +133,15 @@ Motivation | That'll be the biggest challenge for me. I need to keep myself moti
 * Splitscreen or online multiplayer
   * I don't think that I'll build something like this into the game but it is maybe interesting for testing purpose
 
+## Setup
+
+To make potential cooperative work better the launch.json and task.json do not reference the Godot editor directly but using an environment variable.
+
+```powershell
+# Powershell
+$Env:godotEditor = '<editor-path>'
+```
+
 [FirstLook]: Pitch/FirstLook.svg
 [Rules]: #rules
+[Setup]: #setup
