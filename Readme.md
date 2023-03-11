@@ -24,6 +24,72 @@ Number | Description
 
 ## Rules
 
+This section describes all rules of the game. This rules should be found in the finished game. Changes can be done to this rules when I decide that it would make more sense or fun with different rules.
+
+### Player
+
+* The player can move from the left to the right
+  * The area where the player can walk is limited
+    * The left limit is the table of the customer
+    * The right limit is the game window
+* The player carries the burger plate with the burger on it
+* When the player moves completly to the left the burger is delivered to the customer
+
+### Plate
+
+* The plate has a hitbox
+  * When a ingredient hits the hitbox of the plate it is added to the burger
+  * The hitbox of the plate is not changed by the burger on it
+
+### Burger
+
+* The maximum size of a burger is ten ingredients including bread
+  * Ingredients can only be added and not be removed from the burger
+  * After delivering the burger to the customer the burger has again zero ingredients
+
+### Burger blueprint
+
+* The minimum size of a burger blueprint contains four ingredients
+* The maximum size of a bruger blueprint contains eight ingredients
+
+### Customer/Delivery/Payment
+
+* A burger with zero ingredients cannot be delivered
+* Each ingredient which is shown in the blueprint and is contained in the burger add 1€ to the burger bill
+* A perfect burger, when the burger looks like the one shown in the blueprint, add additional 2€ to the burger bill
+* Ingredients which are not shown in the blueprint and are not special ingredients remove -1€ from the burger bill
+* As long the burger does not contain a no-go and it contains at least the same amount as shown in the blueprint the customer will pay 1€
+  * It does not matter when the burger bill is negative
+* When the burger contains not enough ingredients the customer will pay 0€
+  * It does not matter when the burger bill is negative
+* When the burger contains a no-go the player loose 2€ for damage payment
+
+### Ingredients
+
+* Normal ingredients
+  * Bread
+  * Ketchup
+  * Cheese
+  * Meat-Patty
+  * Vegan-Patty
+  * Lettuce
+  * Onion
+* No-gos
+  * A patty is a no-go for a vegan only customer
+  * A vegan-patty is a no-go for a customer who wants only meat from animals
+
+### Timer
+
+* When the timer is running randomly ingredients fall to the ground
+* By timeout no new ingredients will start to fall down
+  * The player has the chance to deliver the last burger
+
+### Remarks
+
+* For corretion purpose is the maximum burger blueprint eight ingredients large but the burger itself can be ten ingredients large
+* There are customers who want meat from animals and vegan meat
+
+
 ## Challenges
 
 Their are some personal challenges that I need to find a solution for.
@@ -35,25 +101,26 @@ Motivation | That'll be the biggest challenge for me. I need to keep myself moti
 
 ## Tasks
 
-* Setting up the godot project
-* Implementation
-  * Player movement
-  * Adding falling ingredients
-    * Ingredients should be random but in the blueprint shown ingredients should fall down more often
-  * Adding plate with hitbox
-    * When ingredients hitting the plate they have to be added to the burger
-  * Deliver burger to the customer on the left
-    * When burger is delivered the quality of the burger needs to be calculated and the money needs to be added to the score 
-  * The timer
-    * When the time is over they should not falling new ingredients
-    * Ingredients falling at the moment should falling to the ground
-    * When all ingredients passed the player the player should be moved to the customer automatically to deliver the last burger
-  * Burger blueprint tile should show burger
-* Art
-  * Finding some free assets to use on the internet
-  * Creating burger ingredient assets
-* Start game screen
-* Different resolutions
+- [ ] Setting up the godot project
+- [ ] Implementation
+  - [ ] Player movement
+  - [ ] Adding falling ingredients
+    - [ ] Ingredients should be random but in the blueprint shown ingredients should fall down more often
+  - [ ] Adding plate with hitbox
+    - [ ] When ingredients hitting the plate they have to be added to the burger
+- [ ] Deliver burger to the customer on the left
+  - [ ] When burger is delivered the quality of the burger needs to be calculated and the money needs to be added to the score 
+- [ ] The timer
+  - [ ] When the time is over they should not falling new ingredients
+  - [ ] Ingredients falling at the moment should falling to the ground
+  - [ ] When all ingredients passed the player the player should be moved to the customer automatically to deliver the last burger
+  - [ ] Let player choose between three, four or five minutes
+- [ ] Burger blueprint tile should show burger
+- [ ] Art
+  - [ ] Finding some free assets to use on the internet
+  - [ ] Creating burger ingredient assets
+- [ ] Start game screen
+- [ ] Different resolutions
 
 ## Plans for the future
 
