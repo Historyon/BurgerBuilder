@@ -4,6 +4,8 @@ Burger Builder is my first small game for learning purpose. It is created with t
 
 When you want to edit something please have a look inside [the setup section][Setup].
 
+Also have a look into my [DevLog] where I add every now and then another entry about how the development is going on.
+
 ## General idea
 
 You're playing Jim the burger builder. Jims task is to catch falling burger ingredients in a corret order and serve the builded burger the customers. Jim works in shift work so his time to build burgers is limited. In most cases customers will also eat burgers that are not builded as they whishes but pay less money for the burger. In some cases a customer will not pay for a builded burger. For example when the customer is a vegan and Jim serves a burger with meat from animals.
@@ -47,16 +49,17 @@ This section describes all rules of the game. This rules should be found in the 
 
 * The maximum size of a burger is ten ingredients including bread
   * Ingredients can only be added and not be removed from the burger
-  * After delivering the burger to the customer the burger has again zero ingredients
+  * After delivering the burger to the customer the burger has a bread ingredient at the start
 
 ### Burger blueprint
 
 * The minimum size of a burger blueprint contains four ingredients
 * The maximum size of a bruger blueprint contains eight ingredients
+* A burger has to start and end with a bread
 
 ### Customer/Delivery/Payment
 
-* A burger with zero ingredients cannot be delivered
+* A burger with one ingredients cannot be delivered
 * Each ingredient which is shown in the blueprint and is contained in the burger add 1€ to the burger bill
 * A perfect burger, when the burger looks like the one shown in the blueprint, add additional 2€ to the burger bill
 * Ingredients which are not shown in the blueprint and are not special ingredients remove -1€ from the burger bill
@@ -103,7 +106,7 @@ Motivation | That'll be the biggest challenge for me. I need to keep myself moti
 
 ## Tasks
 
-- [ ] Setting up the godot project
+- [x] Setting up the godot project
 - [ ] Implementation
   - [ ] Player movement
   - [ ] Adding falling ingredients
@@ -135,7 +138,7 @@ Motivation | That'll be the biggest challenge for me. I need to keep myself moti
 
 ## Setup
 
-To make potential cooperative work better the launch.json and task.json do not reference the Godot editor directly but using an environment variable.
+To make potential cooperative work better the launch.json and task.json do not reference the Godot editor directly but using an environment variable. (Consider to restart your machine after setting the environment variable)
 
 ```powershell
 # Powershell
@@ -143,5 +146,6 @@ $Env:godotEditor = '<editor-path>'
 ```
 
 [FirstLook]: Pitch/FirstLook.svg
+[DevLog]: DevLog.md
 [Rules]: #rules
 [Setup]: #setup
