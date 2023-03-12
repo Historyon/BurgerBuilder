@@ -16,7 +16,7 @@
             "request": "launch",
             "mode": "executable",
             "preLaunchTask": "build",
-            "executable": "{env:godotEditor}",
+            "executable": "${env:godotEditor}",
             "executableArguments": [
                 "--path",
                 "${workspaceRoot}"
@@ -28,7 +28,7 @@
             "request": "launch",
             "mode": "executable",
             "preLaunchTask": "build",
-            "executable": "{env:godotEditor}",
+            "executable": "${env:godotEditor}",
             "executableArguments": [
                 "--path",
                 "${workspaceRoot}",
