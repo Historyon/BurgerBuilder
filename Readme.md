@@ -108,7 +108,7 @@ Motivation | That'll be the biggest challenge for me. I need to keep myself moti
 
 - [x] Setting up the godot project
 - [ ] Implementation
-  - [ ] Player movement
+  - [x] Player movement
   - [ ] Adding falling ingredients
     - [ ] Ingredients should be random but in the blueprint shown ingredients should fall down more often
   - [ ] Adding plate with hitbox
